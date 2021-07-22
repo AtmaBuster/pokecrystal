@@ -1,3 +1,10 @@
+# Atma's Crystal Stuff
+
+This is my own playground thing for crystal stuff, usually to put it into another hack or something but share it as well. Feel free to use anything in here in your own stuff! (with credit pls)
+
+
+Now, the regular pokecrystal README because I cbf to change it
+
 # Pokémon Crystal [![Build Status][ci-badge]][ci]
 
 This is a disassembly of Pokémon Crystal.
