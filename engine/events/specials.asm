@@ -198,6 +198,14 @@ SlotMachine:
 	call StartGameCornerGame
 	ret
 
+VoltorbFlip:
+	call CheckCoinCase
+	ret c
+	ld a, BANK(_VoltorbFlip)
+	ld hl, _VoltorbFlip
+	call StartGameCornerGame
+	ret
+
 CardFlip:
 	call CheckCoinsAndCoinCase
 	ret c
@@ -227,6 +235,25 @@ StartGameCornerGame:
 	rst FarCall
 	call ExitAllMenus
 	ret
+
+CheckCoinCase:
+	ld a, COIN_CASE
+	ld [wCurItem], a
+	ld hl, wNumItems
+	call CheckItem
+	jr nc, .no_coin_case
+	and a
+	ret
+
+.no_coin_case
+	ld hl, .NoCoinCaseText
+	call PrintText
+	scf
+	ret
+
+.NoCoinCaseText:
+	text_far _NoCoinCaseText
+	text_end
 
 CheckCoinsAndCoinCase:
 	ld hl, wCoins

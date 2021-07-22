@@ -54,6 +54,7 @@ SGBLayoutJumptable:
 	dw .SGB_TrainerOrMonFrontpicPals
 	dw .SGB_MysteryGift
 	dw .SGB_Unused1E
+	dw .SGB_VoltorbFlip
 	assert_table_length NUM_SCGB_LAYOUTS
 
 .SGB_BattleGrayscale:
@@ -562,6 +563,9 @@ endr
 
 .gate
 	ld a, PREDEFPAL_PEWTER
+	ret
+
+.SGB_VoltorbFlip:
 	ret
 
 INCLUDE "data/maps/sgb_roof_pal_inds.asm"

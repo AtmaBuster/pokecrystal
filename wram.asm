@@ -794,6 +794,19 @@ wSlotsDataEnd::
 wSlotsEnd::
 
 NEXTU
+; voltorb flip
+wVoltorbFlip::
+wVFlipBoard:: ds 5 * 5
+wVFlipCursorPos:: db
+wVFlipCardsTurned:: db
+wVFlipComboCounter:: db
+wVFlipLevel:: db
+wVFlipRowStats:: ds 5 * 2
+wVFlipColStats:: ds 5 * 2
+wVFlipOldLevel:: db
+wVoltorbFlipEnd::
+
+NEXTU
 ; card flip
 wDeck:: ds 4 * 6
 wDeckEnd::

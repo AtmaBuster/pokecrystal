@@ -207,6 +207,9 @@ gfx/slots/slots_1.2bpp: tools/gfx += --trim-whitespace
 gfx/slots/slots_2.2bpp: tools/gfx += --interleave --png=$<
 gfx/slots/slots_3.2bpp: tools/gfx += --interleave --png=$< --remove-duplicates --keep-whitespace --remove-xflip
 
+gfx/voltorb_flip/sprite_tiles.2bpp: tools/gfx += --interleave --png=$<
+gfx/voltorb_flip/bg_tiles.2bpp: tools/gfx += --trim-whitespace
+
 gfx/card_flip/card_flip_1.2bpp: tools/gfx += --trim-whitespace
 gfx/card_flip/card_flip_2.2bpp: tools/gfx += --remove-whitespace
 
